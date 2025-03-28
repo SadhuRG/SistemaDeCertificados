@@ -205,7 +205,8 @@
                 </div>
 
                 <div id="grupos" class="content-section hidden">
-                <h1>SECCION DE GRUPOS</h1>
+                <h1 class="text-3xl text-center font-bold"> Sección de Grupos</h1>
+                    @livewire('grupos-post')
                 </div>
 
                 <div id="personas" class="content-section hidden">
@@ -228,9 +229,7 @@
         </div>
 
         <!-- SCRIPT PARA MANEJAR EL DASHBARD -->
-        <script>
         @vite('resources/js/admin.js')
-        </script>
 
     </div> 
 
