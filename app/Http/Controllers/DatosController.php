@@ -77,7 +77,7 @@ class DatosController extends Controller
         ['id' => 19, 'nombre' => 'Grupo de Certificación Docker 2024-II', 'tipo' => 'Certificado de virtualización', 'descripcion' => 'Certificación en contenedores con Docker', 'fechainicio' => '2024-03-01', 'fechafin' => '2024-04-15', 'creadorgrupo' => 'Ricardo Fuentes', 'generadorcertificado' => 'Beatriz Solís', 'firmante1' => 'Ricardo Fuentes', 'firmante2' => 'Francisco Lara', 'firmante3' => 'Ninguno', 'firmante4' => 'Ninguno', 'plantilla' => '/templates/docker.png'],
         ['id' => 20, 'nombre' => 'Grupo de Certificación Kubernetes 2024-II', 'tipo' => 'Certificado de orquestación de contenedores', 'descripcion' => 'Certificación en administración de Kubernetes', 'fechainicio' => '2024-02-01', 'fechafin' => '2024-03-31', 'creadorgrupo' => 'Gustavo Varela', 'generadorcertificado' => 'Daniela Acosta', 'firmante1' => 'Gustavo Varela', 'firmante2' => 'Rodrigo Mena', 'firmante3' => 'Ninguno', 'firmante4' => 'Ninguno', 'plantilla' => '/templates/kubernetes.png'],
     ];
-    
+
 
     // Array de fechas de emisión
     public $fechas_emision = [

@@ -199,9 +199,7 @@
                 </div>  
                 
                 <div id="certificados" class="content-section hidden">
-                    
-                @livewire('certificados-post')
-
+                    @livewire('certificados-post')
                 </div>
 
                 <div id="grupos" class="content-section hidden">
