@@ -164,5 +164,17 @@ class DatosController extends Controller
         }, range(0, 19));
     }
 
+    public function getGruposCertificacion()
+    {
+        $this->grupos_certificacion = array_map(function($i) {
+            return [
+                'id' => $i + 1,
+                'nombre' => $this->codigos[$i]['codigo'],
+                'tipo' => $this->usuarios[$i]['nombre'] . ' ' . $this->usuarios[$i]['apellido'],
+            ];
+        }, range(0, 10));
+
+        return $this->grupos_certificacion;
+    }
 
 }

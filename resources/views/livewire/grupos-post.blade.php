@@ -3,7 +3,7 @@
   <div class="mx-10">
     <div class="bg-white p-4 rounded-lg shadow-lg">
       <div class="bg-[#F7FAFF] p-4 rounded-lg">
-        
+
         <!-- Filtro de tabla -->
         <div class="flex items-center gap-4">
           <div class="bg-white mb-4 p-2 rounded-lg shadow-lg">
@@ -66,10 +66,10 @@
                     ID
                     <div class="flex flex-col ml-3">
                       <img src="{{ asset('icons/triangle.svg') }}" wire:click="order('id')"
-                        class="w-3 h-3 cursor-pointer"
+                        class="w-3 h-3 cursor-pointer {{ $sort === 'id' && $direction === 'asc' ? 'opacity-100' : 'opacity-40' }}"
                         alt="Ascendente">
                       <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('id')"
-                        class="w-3 h-3 cursor-pointer"
+                        class="w-3 h-3 cursor-pointer {{ $sort === 'id' && $direction === 'desc' ? 'opacity-100' : 'opacity-40' }}"
                         alt="Descendente">
                     </div>
                   </div>
@@ -78,10 +78,10 @@
                   <div class="flex items-center">
                     NOMBRE
                     <div class="flex flex-col ml-3">
-                      <img src="{{ asset('icons/triangle.svg')}}" wire:click="order('codigo')"
+                      <img src="{{ asset('icons/triangle.svg')}}" wire:click="order('nombre')"
                         class="w-3 h-3 cursor-pointer }}"
                         alt="Ascendente">
-                      <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('codigo')"
+                      <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('nombre')"
                         class="w-3 h-3 cursor-pointer "
                         alt="Descendente">
                     </div>
@@ -91,10 +91,10 @@
                   <div class="flex items-center">
                     TIPO
                     <div class="flex flex-col ml-3">
-                      <img src="{{ asset('icons/triangle.svg') }}" wire:click="order('titular')"
+                      <img src="{{ asset('icons/triangle.svg') }}" wire:click="order('tipo')"
                         class="w-3 h-3 cursor-pointer "
                         alt="Ascendente">
-                      <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('titular')"
+                      <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('tipo')"
                         class="w-3 h-3 cursor-pointer "
                         alt="Descendente">
                     </div>
@@ -172,12 +172,13 @@
               @endforeach
             </tbody>
           </table>
+
         </div>
 
         @else
         <div class="rounded-lg text-lg ml-4 text-gray-700 bg-[#F8D7DA] dark:bg-gray-700 dark:text-gray-400">
-          <h1 class="px-3 py-3 text-[#991C24]">
-            No existe ningun certificado coincidente en la busqueda
+          <h1 class="px-3 py-3 text-[#991C24] dark:text-gray-300">
+            No existe ningún registro
           </h1>
         </div>
         @endif
